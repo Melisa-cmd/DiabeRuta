@@ -1,0 +1,873 @@
+body {
+    font-family: 'Open Sans', sans-serif; /* Open Sans para el texto general del cuerpo */
+    background-color:#E0F7FAf4; /* Un color de fondo gris claro */
+    margin: 0; /* Elimina los márgenes predeterminados del body */
+    padding: 20; /* <--- El padding lo daremos en el contenedor principal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+/* Bloquea el scroll del body cuando el menú móvil está abierto */
+body.no-scroll {
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif; /* Poppins para el título principal */
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif; /* Poppins para los subtítulos */
+    color: #3498db; /* Un azul vibrante que habíamos elegido antes */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em; /* Un tamaño adecuado para un subtítulo */
+    text-align: center; /* Centramos los subtítulos para mantener la estética */
+}
+
+p {
+    font-family: 'Open Sans', sans-serif; /* Open Sans para los párrafos */
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+
+/* Estilos específicos para la sección de bienvenida */
+.seccion-bienvenida {
+    text-align: center; /* Centrar el contenido de la sección */
+    margin-bottom: 40px; /* Espacio debajo de esta sección */
+     max-width: 1200px; /* Define un ancho máximo para tu banner */
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+    margin-left: auto; /* Centra el div */
+    margin-right: auto; /* Centra el div */
+    padding: 0 20px; /* Añade un padding horizontal para que el contenido no se pegue a los bordes de la ventana */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+/* Estilos para el botón principal del home */
+.btn-principal {
+    background-color: #3498db; /* Nuestro azul vibrante de marca */
+    color: white; /* Texto blanco */
+    font-family: 'Poppins', sans-serif; /* Usamos Poppins para el texto del botón, queda más moderno */
+    font-size: 1.3em; /* Lo hacemos un poco más grande para que destaque */
+    padding: 18px 35px; /* Más espacio interno para un look más "generoso" */
+    border-radius: 8px; /* Bordes un poco menos redondeados, más modernos */
+    margin-top: 40px; /* Más espacio arriba para separarlo del texto */
+    text-decoration: none; /* Asegura que no tenga subrayado */
+    font-weight: 600; /* Seminegrita para que se lea bien */
+    display: inline-block; /* Para que el padding y margin funcionen bien */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para los efectos */
+}
+
+.btn-principal:hover {
+    background-color: #2980b9; /* Un azul un poco más oscuro al pasar el mouse */
+    transform: translateY(-3px); /* Se eleva un poco más */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada al pasar el mouse */
+}
+.eslogan {
+    font-size: 1.3em; /* Tamaño más grande para el eslogan */
+    color: #444; /* Un gris más oscuro */
+    margin-bottom: 30px;
+    font-style: italic; /* Texto en cursiva para el eslogan */
+}
+
+.imagen-portada {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Sombra para la imagen */
+    margin-top: 20px; /* Espacio encima de la imagen */
+}
+
+/* Estilos para el encabezado del sitio (donde estará el logo y la navegación) */
+.encabezado-sitio {
+    background-color: #ffffff; /* Fondo blanco para el encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    padding: 15px 0; /* Espaciado interno superior e inferior */
+    width: 100%; /* Ocupa todo el ancho */
+    display: flex; /* Usamos Flexbox para alinear el logo y el menú */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    position: sticky; /* Hace que el encabezado se "pegue" en la parte superior al hacer scroll */
+    top: 0; /* Se pega en la parte superior */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos al hacer scroll */
+}
+
+.encabezado-sitio .logo {
+    margin-left: 5%; /* Un poco de margen a la izquierda */
+}
+
+.encabezado-sitio .logo a {
+   font-family: 'Poppins', sans-serif;
+    font-size: 1.8em; /* Aumentamos el tamaño ligeramente */
+    color: #3498db; /* ¡Cambiamos a nuestro azul vibrante! */
+    text-decoration: none;
+    font-weight: 700; /* Mantenemos la negrita */
+    letter-spacing: 0.5px; /* Añadimos un pequeño espaciado entre letras */
+    transition: color 0.3s ease; /* Para una transición suave al pasar el mouse (opcional) */
+}
+
+/* Estilos para la barra de navegación principal */
+.navegacion-principal ul {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinea los ítems del menú en fila */
+    margin-right: 5%; /* Un poco de margen a la derecha */
+}
+
+.navegacion-principal ul li {
+    margin-left: 25px; /* Espacio entre cada ítem del menú */
+}
+
+.navegacion-principal ul li a {
+    font-family: 'Open Sans', sans-serif;
+    color: #555; /* Color del texto del menú */
+    text-decoration: none; /* Quita el subrayado de los enlaces del menú */
+    font-weight: 600; /* Seminegrita */
+    font-size: 1.05em;
+    padding: 5px 0; /* Un poco de padding para que se vea bien */
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.navegacion-principal ul li a:hover {
+    color: #3498db; /* Cambia el color al pasar el mouse */
+    border-bottom: 2px solid #3498db; /* Agrega una línea inferior al pasar el mouse */
+}
+
+/* Estilos para el pie de página (footer) */
+.pie-pagina {
+    background-color: #2c3e50; /* El azul oscuro de tus títulos */
+    color: #ffffff; /* Texto blanco */
+    padding: 30px 0; /* Espaciado interno */
+    text-align: center; /* Centramos el texto */
+    width: 100%; /* Ocupa todo el ancho */
+    margin-top: auto; /* Empuja el footer hacia abajo en páginas cortas con flexbox en body */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Sombra superior sutil */
+}
+
+.pie-pagina .contenedor-footer {
+    max-width: 960px; /* Mismo ancho máximo que tu contenedor principal */
+    width: 90%;
+    margin: 0 auto; /* Centrar el contenido del footer */
+    display: flex; /* Usamos Flexbox para alinear el texto y los enlaces */
+    flex-direction: column; /* Apila los elementos verticalmente por defecto */
+    align-items: center; /* Centra horizontalmente */
+}
+
+.pie-pagina p {
+    color: #ffffff; /* Aseguramos que el párrafo sea blanco */
+    margin-bottom: 15px; /* Espacio debajo del párrafo */
+    font-size: 0.95em;
+    line-height: 1.5; /* Ajuste para legibilidad */
+}
+
+.pie-pagina .enlaces-footer a {
+    color: #9bd3d3; /* Un verde-azul claro para los enlaces, que contraste */
+    text-decoration: none;
+    margin: 0 10px; /* Espacio entre los enlaces */
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.pie-pagina .enlaces-footer a:hover {
+    color: #ffffff; /* Blanco al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Media query para pantallas más grandes: el footer se alinea en una fila */
+@media (min-width: 768px) {
+    .pie-pagina .contenedor-footer {
+        flex-direction: row; /* En pantallas grandes, alineamos en fila */
+        justify-content: space-between; /* Distribuye espacio entre copyright y enlaces */
+    }
+
+    .pie-pagina p {
+        margin-bottom: 0; /* No hay margen inferior si están en fila */
+    }
+}
+
+/* Estilos específicos para la foto de perfil en la página "Sobre Mí" */
+.foto-perfil {
+    width: 180px; /* Tamaño fijo para la foto */
+    height: 180px; /* Mismo alto para que sea un círculo si le ponemos border-radius */
+    border-radius: 50%; /* ¡Esto la hace redonda! */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    margin: 25px auto 35px auto; /* Centrarla horizontalmente y darle espacio */
+    display: block; /* Para que margin: auto funcione para centrarla */
+    border: 4px solid #3498db; /* Un borde azul que combine con tu marca */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos para la sección de información de contacto */
+.info-contacto {
+    background-color: #f9f9f9; /* Un fondo muy suave para el bloque de información */
+    border: 1px solid #eee; /* Borde sutil */
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center; /* Centramos el contenido dentro del bloque */
+}
+
+.info-contacto p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333; /* Color de texto más oscuro para la información clave */
+}
+
+.info-contacto p strong {
+    color: #2c3e50; /* Hace que el "Correo Electrónico:" y "WhatsApp:" destaquen */
+}
+
+.info-contacto a {
+    color: #3498db; /* Nuestro azul de marca para los enlaces de contacto */
+    text-decoration: none;
+    font-weight: 600; /* Seminegrita para que se vean bien */
+    transition: color 0.3s ease;
+}
+
+.info-contacto a:hover {
+    color: #2980b9; /* Azul más oscuro al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilos básicos para el futuro formulario (comentado en HTML por ahora) */
+/* .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.formulario-contacto label {
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.formulario-contacto .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.formulario-contacto .btn:hover {
+    background-color: #218838;
+} */
+
+/* Estilos para la sección de apoyo (donaciones/colaboraciones) */
+.seccion-apoyo {
+    background-color: #e6f7ff; /* Un azul muy claro para diferenciarla */
+    border: 1px solid #d0eefb;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.seccion-apoyo h2 {
+    color: #2c3e50; /* Color de título principal */
+    margin-bottom: 20px;
+}
+
+.seccion-apoyo p {
+    color: #555;
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.btn-apoyo {
+    background-color: #ffde00; /* El color amarillo distintivo de Cafecito */
+    color: #333; /* Texto oscuro para que contraste con el amarillo */
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Bien negrita */
+    font-size: 1.2em;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0c000; /* Borde sutil para darle más "pop" */
+}
+
+.btn-apoyo:hover {
+    background-color: #f0c000; /* Un amarillo un poco más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.apoyo-nota {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* --- Estilos para el Menú Hamburguesa y Navegación Móvil --- */
+
+/* Ocultamos el botón de la hamburguesa por defecto (visible solo en móviles) */
+.menu-toggle {
+    display: none; /* Oculto en desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Aseguramos que esté por encima del menú */
+    margin-right: 5%; /* Alineado con el margen del menú en desktop */
+}
+
+/* Estilos de las líneas de la hamburguesa */
+.hamburger-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #2c3e50; /* Color de tus títulos */
+    margin: 5px 0;
+    transition: all 0.3s ease; /* Transición suave para la animación */
+}
+
+/* Estilos para cuando el menú está abierto (transformación de hamburguesa a "X") */
+.menu-toggle.open .hamburger-icon:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .hamburger-icon:nth-child(2) {
+    opacity: 0; /* Desaparece la línea del medio */
+}
+
+.menu-toggle.open .hamburger-icon:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Ocultamos la navegación principal por defecto en pantallas pequeñas */
+/* y definimos cómo se verá cuando esté abierta */
+@media (max-width: 768px) { /* Este breakpoint es para pantallas de tablet y móvil */
+    .navegacion-principal {
+        display: none; /* Ocultamos el menú principal en móviles */
+        position: fixed; /* Posición fija para que ocupe toda la pantalla */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.98); /* Fondo blanco con ligera transparencia */
+        flex-direction: column; /* Apilamos los ítems del menú verticalmente */
+        justify-content: center; /* Centramos verticalmente */
+        align-items: center; /* Centramos horizontalmente */
+        z-index: 999; /* Por debajo del botón, pero por encima del contenido */
+        opacity: 0; /* Invisible por defecto */
+        pointer-events: none; /* No interactuable por defecto */
+        transition: opacity 0.3s ease; /* Transición suave para la aparición */
+    }
+
+    /* Cuando la clase 'open' se añade al body, mostramos el menú */
+    .navegacion-principal.menu-open {
+        display: flex; /* Lo mostramos */
+        opacity: 1; /* Lo hacemos visible */
+        pointer-events: all; /* Lo hacemos interactuable */
+    }
+
+    .navegacion-principal ul {
+        flex-direction: column; /* Apilamos los enlaces */
+        text-align: center;
+        margin: 0; /* Quitamos márgenes */
+        padding: 0; /* Quitamos padding */
+    }
+
+    .navegacion-principal ul li {
+        margin: 20px 0; /* Más espacio vertical entre los ítems */
+    }
+
+    .navegacion-principal ul li a {
+        font-size: 1.8em; /* Hacemos los enlaces más grandes para tocar con el dedo */
+        color: #2c3e50; /* Color de texto más oscuro */
+        border-bottom: none; /* Quitamos el borde inferior que teníamos */
+    }
+
+    .navegacion-principal ul li a:hover {
+        color: #3498db; /* Mantenemos el hover azul */
+        border-bottom: none; /* Quitamos el borde inferior que teníamos */
+    }
+
+    /* Mostramos el botón de la hamburguesa en móviles */
+    .menu-toggle {
+        display: block; /* Hacemos visible el botón */
+    }
+
+    /* Ajustes para el encabezado en móviles */
+    .encabezado-sitio {
+        padding: 10px 0; /* Un poco menos de padding en móviles */
+    }
+
+    .encabezado-sitio .logo {
+        margin-left: 5%; /* Mantenemos el margen del logo */
+    }
+}
+
+/* Estilo del botón principal (si ya lo tienes definido como .btn o .btn-principal, úsalo) */
+/* .btn-principal {
+    background-color: #3498db; 
+    color: white;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+.btn-principal:hover {
+    background-color: #2980b9;
+} */
+
+/* Estilo para el botón secundario (Conocé mi Historia) */
+.btn-secundario {
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid white; /* Borde blanco */
+    color: white; /* Texto blanco */
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-secundario:hover {
+    background-color: white; /* Fondo blanco al pasar el mouse */
+    color: #3498db; /* Texto azul al pasar el mouse */
+    border-color: white; /* Mantener el borde blanco */
+}
+
+/* --- Ajustes Responsivos para la Hero Section --- */
+@media (max-width: 992px) { /* Laptops y tablets grandes */
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    .hero-content p {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 768px) { /* Tablets y móviles */
+    .hero-section {
+        height: 500px; /* Un poco menos alto en tablets */
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1.1em;
+    }
+    .hero-buttons {
+        flex-direction: column; /* Apila los botones en columnas */
+        gap: 15px; /* Espacio entre los botones apilados */
+    }
+    .hero-buttons .btn {
+        width: 80%; /* Los botones ocupan más ancho */
+        max-width: 300px; /* Limita su ancho máximo */
+        margin: 0 auto; /* Centra los botones apilados */
+    }
+}
+
+@media (max-width: 480px) { /* Móviles muy pequeños */
+    .hero-section {
+        height: 400px; /* Más pequeña en móviles chicos */
+        background-position: 70% center; /* Ajusta la posición de la imagen para móviles */
+    }
+    .hero-content h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+    .hero-content p {
+        font-size: 0.9em;
+        margin-bottom: 25px;
+    }
+    .hero-buttons .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+/* --- Estilos para Artículos Destacados en el Home (ejemplo) --- */
+.seccion-destacada {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.seccion-destacada h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Aquí irían los estilos específicos para las tarjetas si aún no los tienes definidos globalmente */
+/* .articulo-tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articulo-tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.articulo-tarjeta h3 {
+    font-size: 1.5em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.articulo-tarjeta p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.articulo-tarjeta .btn {
+    background-color: #28a745; 
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.articulo-tarjeta .btn:hover {
+    background-color: #218838;
+} */
+
+/* Ya deberías tener este para el contenedor-articulos, pero lo dejo por si acaso */
+/* .contenedor-articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 960px;
+} */
+
+/* --- Estilos para el Carrusel/Slider de Imágenes --- */
+.carrusel-contenedor {
+    max-width: 1200px; /* Ancho máximo para el carrusel */
+    position: relative;
+    margin: auto; /* Centrar el carrusel */
+    overflow: hidden; /* Asegura que las imágenes no sobresalgan */
+    border-radius: 10px; /* Bordes redondeados para el carrusel */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para destacarlo */
+    margin-bottom: 50px; /* Espacio debajo del carrusel */
+    min-height: 400px;
+    /* --- NUEVO: Asegura que el carrusel respire de los bordes de la ventana --- */
+    padding: 0 20px; /* Un pequeño padding a los lados para que no se pegue en móviles */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.carrusel-slide {
+    display: none; /* Oculta todas las slides por defecto */
+    text-align: center;
+    position: relative; /* Para posicionar el caption */
+    height: 100%;
+}
+
+.carrusel-slide img {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    /* max-height: 550px; <-- Puedes mantenerlo si quieres un límite superior estricto, o quitarlo si quieres que se adapte más.
+                            Si lo mantienes, asegúrate de que sea compatible con min-height del contenedor.
+                            Para tu caso actual, con el texto abajo, es mejor que la imagen ocupe todo el espacio. */
+}
+
+/* Estilos para la nueva sección de Artículos Destacados debajo del carrusel */
+.articulos-destacados-info {
+    text-align: center;
+    padding: 50px 20px; /* Espacio superior, inferior y lateral */
+    background-color: #f9f9f9; /* Un fondo ligeramente diferente para destacarlo */
+    border-radius: 10px;
+    margin-top: 30px; /* Espacio arriba si el carrusel está cerca */
+    margin-bottom: 50px; /* Espacio debajo para la siguiente sección */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.articulos-destacados-info h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid-articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 25px; /* Espacio entre las tarjetas */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.articulo-resumen {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    text-align: left; /* Alinea el texto a la izquierda dentro de la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articulo-resumen:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.articulo-resumen h3 {
+    color: #3498db; /* Nuestro azul de marca */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.articulo-resumen p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.articulo-resumen .btn {
+    display: inline-block; /* Para que el botón no ocupe todo el ancho */
+    background-color: #2ecc71; /* Un color verde para el botón "Leer más" */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.articulo-resumen .btn:hover {
+    background-color: #27ae60;
+}
+
+.ver-todos-articulos {
+    margin-top: 40px;
+}
+
+.ver-todos-articulos .btn-principal {
+    background-color: #3498db; /* El azul de marca */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.ver-todos-articulos .btn-principal:hover {
+    background-color: #2980b9;
+}
+
+/* Media queries para la nueva sección de artículos */
+@media (max-width: 768px) {
+    .articulos-destacados-info h2 {
+        font-size: 2em;
+    }
+    .grid-articulos {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+    .articulo-resumen {
+        padding: 20px;
+    }
+    .articulo-resumen h3 {
+        font-size: 1.3em;
+    }
+}
+
+
+/* Flechas de navegación (prev/next) */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Ajusta el centrado exacto */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para las flechas */
+    z-index: 3; /* Asegura que estén por encima de la imagen */
+}
+
+.prev {
+    left: 20px; /* Ajusta este valor si necesitas que la flecha izquierda esté más hacia adentro */
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 20px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* --- MEDIA QUERIES PARA LAS FLECHAS (Ajustar si el padding en pantallas pequeñas las esconde) --- */
+@media (max-width: 768px) {
+    .prev, .next {
+        font-size: 20px;
+        padding: 12px;
+        /* Si las flechas siguen muy pegadas, puedes ajustar left/right aquí */
+        left: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prev, .next {
+        font-size: 18px;
+        padding: 8px;
+        /* Asegura que sean visibles en pantallas muy pequeñas */
+        left: 5px;
+        right: 5px;
+    }
+}
+
+/* Puntos indicadores del carrusel */
+.carrusel-dots {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Asegura que estén por encima del carrusel si el layout lo requiere */
+    margin-top: -20px; /* Acercar los puntos al carrusel */
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* --- Ajustes Responsivos para el Carrusel --- */
+@media (max-width: 768px) {
+    .carrusel-slide img {
+        max-height: 400px; /* Menos altura en tablets */
+    }
+    .carrusel-caption {
+        padding: 15px 20px;
+    }
+    .carrusel-caption h3 {
+        font-size: 1.5em;
+    }
+    .carrusel-caption p {
+        font-size: 0.9em;
+    }
+    .carrusel-caption .btn {
+        padding: 8px 18px;
+        font-size: 0.9em;
+    }
+    .prev, .next {
+        font-size: 20px;
+        padding: 12px;
+    }
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel-slide img {
+        max-height: 300px; /* Aún menos altura en móviles pequeños */
+    }
+    .carrusel-caption {
+        padding: 10px 15px;
+    }
+    .carrusel-caption h3 {
+        font-size: 1.2em;
+    }
+    .carrusel-caption p {
+        font-size: 0.8em;
+        margin-bottom: 10px;
+    }
+    .carrusel-caption .btn {
+        padding: 7px 15px;
+        font-size: 0.8em;
+    }
+}
